@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
+
+* {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+h1 {
+  margin: 5vw;
+  font-size: 6vw;
+  text-align: center;
+}
+
+p,
+a,
+.title {
+  font-size: 1.6vw;
+}
+
+.menu {
+  text-align: center;
+}
+
+.menu a {
+  text-decoration: line-through;
+  color: black;
+  padding: 1vw 12vw;
+}
+
+.menu .selected {
+  text-decoration: none;
+}
+
+.main {
+  display: none;
+  margin-top: 2vw;
+  text-align: center;
+}
+
+.des-container {
+  display: block;
+  height: 100vw;
+}
+
+.introduction {
+  padding: 4vw;
+  line-height: 3vw;
+}
+
+.introduction:before {
+  content: '{';
+  position: absolute;
+  left: 3vw;
+  margin-top: 4vw;
+  font-size: 15vw;
+}
+
+.introduction:after {
+  content: '}';
+  position: absolute;
+  right: 3vw;
+  margin-top: -5vw;
+  font-size: 15vw;
+}
+
+.lines {
+  width: 60%;
+  margin: 2vw auto;
+  height: 0.3vw;
+  background: black;
+}
+
+.lines:before {
+  content: '';
+  position: absolute;
+  height: 2vw;
+  width: 0.3vw;
+  background: black;
+  margin: -2vw auto;
+  box-shadow: -29.7vw 2vw 0;
+}
+
+.lines:after {
+  content: '';
+  position: absolute;
+  height: 2vw;
+  width: 0.3vw;
+  background: black;
+  margin: auto;
+  box-shadow: 29.5vw 0 0;
+}
+
+.title {
+  display: inline-block;
+  width: 29%;
+  padding: 1vw;
+}
+
+.img {
+  display: inline-block;
+  width: 29.5%;
+  height: 29.5%;
+  margin: 1vw;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  cursor: pointer;
+}
+
+.img-mobile {
+  width: 80%;
+  height: 80%;
+}
+
+.img1 {
+  background-image: url('img/april.jpg');
+}
+.img2 {
+  background-image: url('img/volvo.jpg');
+}
+.img3 {
+  background-image: url('img/deer.jpg');
+}
+.img4 {
+  background-image: url('img/totoro.jpg');
+}
+.img5 {
+  background-image: url('img/robo.jpg');
+}
+.img6 {
+  background-image: url('img/elokuu.jpg');
+}
+.img7 {
+  background-image: url('img/joulu.jpg');
+}
+.img8 {
+  background-image: url('img/blinking-logo.gif');
+}
+.img9 {
+  background-image: url('img/mercedes.jpg');
+}
+.img10 {
+  background-image: url('img/kettu-kavelee.gif');
+}
+.img11 {
+  background-image: url('img/kettu-tanssii.gif');
+}
+.img12 {
+  background-image: url('img/kettu.gif');
+}
+.img13 {
+  background-image: url('img/nallet.gif');
+}
+.img14 {
+  background-image: url('img/SKOTTI.gif');
+}
+.img15 {
+  background-image: url('img/SKOTTI2.gif');
+}
+.img16 {
+  background-image: url('img/drawings/30714021_10211991609448376_8077382661003280384_n.jpg');
+}
+.img17 {
+  background-image: url('img/drawings/31081604_10211991617728583_8402498787523690496_n.jpg');
+}
+.img18 {
+  background-image: url('img/drawings/31108316_10211991617008565_3535514698931765248_n.jpg');
+}
+.img19 {
+  background-image: url('img/drawings/31131325_10211991618968614_8957862875217526784_n.jpg');
+}
+.img20 {
+  background-image: url('img/drawings/31131476_10211991614288497_729335169697185792_n.jpg');
+}
+.img21 {
+  background-image: url('img/code.gif');
+}
+
+.img22 {
+  background-image: url('img/drawings/31143856_10211991607768334_3217508654546681856_n.jpg');
+}
+
+.img23 {
+  background-image: url('img/drawings/31224044_10211991613568479_7071882773505507328_n.jpg');
+}
+
+.img24 {
+  background-image: url('img/drawings/31163508_10211991614568504_5538176215828922368_n.jpg');
+}
+
+.pop-up {
+  display: none;
+  width: 80%;
+  height: 80%;
+  position: fixed;
+  background: #fff;
+  box-shadow: 0 0 3vw rgba(0,0,0,0.4);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  padding: 5vw;
+  box-sizing: inherit;
+}
+
+.close-btn {
+  display: block;
+  position: absolute;
+  width: 5vw;
+  height: 5vw;
+  right: 2vw;
+  top: 2vw;
+  background: white;
+  border: 0.5vw solid black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.close-btn:before {
+  content: 'X';
+  font-size: 3.7vw;
+  font-weight: bolder;
+}
+
+.img-container {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.contact {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  padding: 0vw 3vw;
+  line-height: 4vw
+}
+
+hr {
+  border: 0.2vw solid black;
+}
