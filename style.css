@@ -6,6 +6,7 @@
 
 h1 {
   margin: 5vw;
+  margin-top: 0vw;
   font-size: 6vw;
   text-align: center;
 }
@@ -36,7 +37,7 @@ a,
   text-align: center;
 }
 
-.des-container {
+.container {
   display: block;
   height: 100vw;
 }
@@ -48,6 +49,7 @@ a,
 
 .introduction:before {
   content: '{';
+  font-family: serif;
   position: absolute;
   left: 3vw;
   margin-top: 4vw;
@@ -56,6 +58,7 @@ a,
 
 .introduction:after {
   content: '}';
+  font-family: serif;
   position: absolute;
   right: 3vw;
   margin-top: -5vw;
@@ -63,9 +66,9 @@ a,
 }
 
 .lines {
-  width: 60%;
+  width: 65vw;
   margin: 2vw auto;
-  height: 0.3vw;
+  height: 3px;
   background: black;
 }
 
@@ -73,20 +76,20 @@ a,
   content: '';
   position: absolute;
   height: 2vw;
-  width: 0.3vw;
+  width: 3px;
   background: black;
   margin: -2vw auto;
-  box-shadow: -29.7vw 2vw 0;
+  box-shadow: -32.5vw 2vw 0;
 }
 
 .lines:after {
   content: '';
   position: absolute;
   height: 2vw;
-  width: 0.3vw;
+  width: 3px;
   background: black;
   margin: auto;
-  box-shadow: 29.5vw 0 0;
+  box-shadow: 32.5vw 0 0;
 }
 
 .title {
@@ -95,7 +98,8 @@ a,
   padding: 1vw;
 }
 
-.img {
+.img,
+.tech {
   display: inline-block;
   width: 29.5%;
   height: 29.5%;
@@ -115,63 +119,83 @@ a,
 .img1 {
   background-image: url('img/april.jpg');
 }
+
 .img2 {
   background-image: url('img/volvo.jpg');
 }
+
 .img3 {
   background-image: url('img/deer.jpg');
 }
+
 .img4 {
   background-image: url('img/totoro.jpg');
 }
+
 .img5 {
   background-image: url('img/robo.jpg');
 }
+
 .img6 {
   background-image: url('img/elokuu.jpg');
 }
+
 .img7 {
   background-image: url('img/joulu.jpg');
 }
+
 .img8 {
   background-image: url('img/blinking-logo.gif');
 }
+
 .img9 {
   background-image: url('img/mercedes.jpg');
 }
+
 .img10 {
   background-image: url('img/kettu-kavelee.gif');
 }
+
 .img11 {
   background-image: url('img/kettu-tanssii.gif');
 }
+
 .img12 {
   background-image: url('img/kettu.gif');
 }
+
 .img13 {
   background-image: url('img/nallet.gif');
 }
+
 .img14 {
   background-image: url('img/SKOTTI.gif');
 }
+
 .img15 {
   background-image: url('img/SKOTTI2.gif');
 }
+
 .img16 {
   background-image: url('img/drawings/30714021_10211991609448376_8077382661003280384_n.jpg');
 }
+
 .img17 {
   background-image: url('img/drawings/31081604_10211991617728583_8402498787523690496_n.jpg');
 }
+
 .img18 {
   background-image: url('img/drawings/31108316_10211991617008565_3535514698931765248_n.jpg');
 }
+
 .img19 {
   background-image: url('img/drawings/31131325_10211991618968614_8957862875217526784_n.jpg');
 }
+
 .img20 {
   background-image: url('img/drawings/31131476_10211991614288497_729335169697185792_n.jpg');
 }
+
 .img21 {
   background-image: url('img/code.gif');
 }
@@ -188,13 +212,14 @@ a,
   background-image: url('img/drawings/31163508_10211991614568504_5538176215828922368_n.jpg');
 }
 
-.pop-up {
+.pop-up,
+.pop-up-tech {
   display: none;
   width: 80%;
   height: 80%;
   position: fixed;
   background: #fff;
-  box-shadow: 0 0 3vw rgba(0,0,0,0.4);
+  box-shadow: 0 0 3vw rgba(0, 0, 0, 0.4);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -240,4 +265,48 @@ a,
 
 hr {
   border: 0.2vw solid black;
+}
+
+.tech1 {
+  background-image: url('img/codepen.png');
+}
+
+.tech2 {
+  background-image: url('img/code.gif');
+}
+
+.tech3 {
+  background-image: url('img/action.jpg');
+}
+
+.tech a {
+  display: none;
+}
+
+.text-container {
+  position: absolute;
+  bottom: 2vw;
+  left: 0;
+  width: 100%;
+}
+
+.text-container a {
+  color: black;
+}
+
+#logo {
+  text-align: center;
+  transform-origin: center;
+  transition: 2s;
+  z-index: 20;
+  animation: flip 3s ease-in-out infinite;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(-180deg);
+  }
 }

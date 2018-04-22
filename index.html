@@ -13,6 +13,7 @@
 </head>
 
 <body>
+  <div id="logo"><img src="https://users.metropolia.fi/~tiiaraut/portfolio/img/logo.png" width="6%"></div>
   <h1>Tiia Rautavesi</h1>
 
   <div class="menu">
@@ -21,12 +22,39 @@
     <a class="link contact-link" href="#contact" data-link="contact">Contact</a>
   </div>
 
-  <div class="main" id="tech"></div>
-
-  <div class="main des-container" id="design">
-
+  <div class="main container" id="tech">
     <p class="introduction">
-      Welcome to my show case of pices created during the past 2 years.
+      Welcome to the technical page of my portfolio.
+      <br>Here you can get a peak on what I've been creating during the past few years.
+      <br>I mainly develop for the web, but I'm also interested to wide my scope of expertiese
+      <br> to AI, VR and AR in the future. Also I find game development interesting too :)
+    </p>
+    <div class="lines"></div>
+    <div class="titles">
+      <div class="title">Freetime</div>
+      <div class="title">School</div>
+      <div class="title">Work</div>
+    </div>
+    <div class="tech tech1">
+      <a target="_blank" href="//codepen.io/tiiarautavesi/">I regurally post on Codepen when ever I come up with new things to learn or try out. 
+        <br>Click the text to visit my code gallery :)</a>
+    </div>
+    <div class="tech tech2">
+      <a target="_blank" href="//users.metropolia.fi/~tiiaraut/portfolio/">I have neatly collected my school work in an other portfolio. There you can for example read about my exchange period in Groningen and what I learned about IT Management in Hanzehogeschool. Click the text to view my school portfolio.</a>
+    </div>
+    <div class="tech tech3">
+      <a target="_blank" href="//apprix.fi">Currently I work at Apprix Oy as a Front End Developer. We create learning games for corporate use. I'm learning new things everyday and keeping the code clean! </a>
+    </div>
+    <div class="pop-up-tech modal">
+      <div class="close-btn"></div>
+      <div class="img-container"></div>
+      <div class="text-container"></div>
+    </div>
+  </div>
+
+  <div class="main" id="design">
+    <p class="introduction">
+      Welcome to the more artistic page of my portfolio.
       <br>I've selected some pieces to impress my general style as an illustrator.
       <br>What comes to Design as my profession I'm more focused on UI/UX design in general
       <br>and majority of my commissions are website/software related.
@@ -94,10 +122,12 @@
       width = $(window).width();
       if (width <= 800) {
         $('.img').addClass('img-mobile');
+        $('.tech').addClass('img-mobile');
         $('.lines').hide();
         $('.titles').hide();
       } else {
         $('.img').removeClass('img-mobile');
+        $('.tech').removeClass('img-mobile');
         $('.lines').show();
         $('.titles').show();
       }
@@ -112,6 +142,8 @@
       showMenu();
     });
 
+    //image clicks + popups
+
     $('.img').on('click', function() {
       $('.pop-up').slideDown();
       var classes = $(this).attr('class');
@@ -121,8 +153,21 @@
       $('.img-container').addClass(classNo[1]);
     });
 
+    $('.tech').on('click', function() {
+      $('.pop-up-tech').slideDown();
+      var classes = $(this).attr('class');
+      var classNo = classes.split(" ");
+      console.log(classNo[1]);
+      $('.img-container').attr('class', 'img-container');
+      $('.img-container').addClass(classNo[1]);
+      var text = $(this).children();
+      $('.text-container').empty();
+      $('.text-container').append(text);
+    });
+
     $('.close-btn').on('click', function() {
       $('.pop-up').slideUp();
+      $('.pop-up-tech').slideUp();
     });
 
     //menu
@@ -130,8 +175,10 @@
     $('.link').on('click', function() {
       var modalId = '#' + $(this).data('link');
       console.log(modalId);
+      $('.main').removeClass('container');
       $('.main').hide();
       $(modalId).fadeIn();
+      $(modalId).addClass('container');
       $('.link').removeClass('selected');
       $(this).addClass('selected');
     });
