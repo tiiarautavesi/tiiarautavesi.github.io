@@ -111,6 +111,8 @@
     </div>
   </div>
 
+  <div class="scroll-up"></div>
+
 </body>
 
 <script>
@@ -168,6 +170,15 @@
     $('.close-btn').on('click', function() {
       $('.pop-up').slideUp();
       $('.pop-up-tech').slideUp();
+    });
+
+    //scroll up 
+
+    $('.scroll-up').on('click', function() {
+      $("html, body").animate({
+        scrollTop: 0
+      }, "slow");
+      return false;
     });
 
     //menu

@@ -311,3 +311,23 @@ hr {
     transform: rotateY(-180deg);
   }
 }
+
+.scroll-up {
+  position: fixed;
+  bottom: 2vw;
+  right: 2vw;
+  width: 5vw;
+  height: 5vw;
+  background: white;
+  border: 0.5vw solid black;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.scroll-up:before {
+  content: '^';
+  font-size: 5vw;
+  padding: 1vw;
+  font-weight: bolder;
+}
