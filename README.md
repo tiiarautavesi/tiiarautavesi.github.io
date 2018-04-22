@@ -1,2 +1,0 @@
-# tiiarautavesi.github.io
-Portfolio
