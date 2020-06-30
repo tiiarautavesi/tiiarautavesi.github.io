@@ -5,16 +5,16 @@
 }
 
 h1 {
-  margin: 5vw;
-  margin-top: 0vw;
-  font-size: 6vw;
+  margin: 5rem;
+  margin-top: 0.5rem;
+  font-size: 6rem;
   text-align: center;
 }
 
 p,
 a,
 .title {
-  font-size: 1.6vw;
+  font-size: 1.6rem;
 }
 
 .menu {
@@ -33,41 +33,42 @@ a,
 
 .main {
   display: none;
-  margin-top: 2vw;
+  margin-top: 2rem;
   text-align: center;
 }
 
 .container {
   display: block;
   height: 100vw;
+  margin: 0 7rem;
 }
 
 .introduction {
-  padding: 4vw;
-  line-height: 3vw;
+  padding: 4rem;
+  line-height: 3rem;
 }
 
 .introduction:before {
   content: '{';
   font-family: serif;
   position: absolute;
-  left: 3vw;
-  margin-top: 4vw;
-  font-size: 15vw;
+  left: 3rem;
+  margin-top: 4rem;
+  font-size: 15rem;
 }
 
 .introduction:after {
   content: '}';
   font-family: serif;
   position: absolute;
-  right: 3vw;
-  margin-top: -5vw;
-  font-size: 15vw;
+  right: 3rem;
+  margin-top: -5rem;
+  font-size: 15rem;
 }
 
 .lines {
-  width: 65vw;
-  margin: 2vw auto;
+  width: 65rem;
+  margin: 2rem auto;
   height: 3px;
   background: black;
 }
@@ -75,27 +76,27 @@ a,
 .lines:before {
   content: '';
   position: absolute;
-  height: 2vw;
+  height: 2rem;
   width: 3px;
   background: black;
-  margin: -2vw auto;
-  box-shadow: -32.5vw 2vw 0;
+  margin: -2rem auto;
+  box-shadow: -32.5rem 2rem 0;
 }
 
 .lines:after {
   content: '';
   position: absolute;
-  height: 2vw;
+  height: 2rem;
   width: 3px;
   background: black;
   margin: auto;
-  box-shadow: 32.5vw 0 0;
+  box-shadow: 32.5rem 0 0;
 }
 
 .title {
   display: inline-block;
   width: 29%;
-  padding: 1vw;
+  padding: 1rem;
 }
 
 .img,
@@ -103,7 +104,7 @@ a,
   display: inline-block;
   width: 29.5%;
   height: 29.5%;
-  margin: 1vw;
+  margin: 1rem;
   padding: 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -219,31 +220,31 @@ a,
   height: 80%;
   position: fixed;
   background: #fff;
-  box-shadow: 0 0 3vw rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.4);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   overflow: hidden;
-  padding: 5vw;
+  padding: 5rem;
   box-sizing: inherit;
 }
 
 .close-btn {
   display: block;
   position: absolute;
-  width: 5vw;
-  height: 5vw;
-  right: 2vw;
-  top: 2vw;
+  width: 5rem;
+  height: 5rem;
+  right: 2rem;
+  top: 2rem;
   background: white;
-  border: 0.5vw solid black;
+  border: 0.5rem solid black;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .close-btn:before {
   content: 'X';
-  font-size: 3.7vw;
+  font-size: 3.7rem;
   font-weight: bolder;
 }
 
@@ -259,12 +260,12 @@ a,
   display: inline-block;
   vertical-align: top;
   text-align: left;
-  padding: 0vw 3vw;
-  line-height: 4vw
+  padding: 0rem 3rem;
+  line-height: 4rem
 }
 
 hr {
-  border: 0.2vw solid black;
+  border: 0.2rem solid black;
   background: black;
 }
 
@@ -286,7 +287,7 @@ hr {
 
 .text-container {
   position: absolute;
-  bottom: 2vw;
+  bottom: 2rem;
   left: 0;
   width: 100%;
 }
@@ -303,6 +304,10 @@ hr {
   animation: flip 3s ease-in-out infinite;
 }
 
+#logo svg {
+  width: 7%;
+}
+
 @keyframes flip {
   0% {
     transform: rotateY(0deg);
@@ -314,12 +319,12 @@ hr {
 
 .scroll-up {
   position: fixed;
-  bottom: 2vw;
-  right: 2vw;
-  width: 5vw;
-  height: 5vw;
+  bottom: 2rem;
+  right: 2rem;
+  width: 5rem;
+  height: 5rem;
   background: white;
-  border: 0.5vw solid black;
+  border: 0.5rem solid black;
   border-radius: 50%;
   cursor: pointer;
   overflow: hidden;
@@ -327,7 +332,28 @@ hr {
 
 .scroll-up:before {
   content: '^';
-  font-size: 5vw;
-  padding: 1vw;
+  font-size: 5rem;
+  padding: 1rem;
   font-weight: bolder;
+}
+
+.timeline {
+  display: inline-block;
+  width: 45%;
+  padding: 2rem 2%;
+  vertical-align: middle;
+  min-height: 4rem;
+}
+
+.timeline p {
+  margin: 0;
+}
+
+.timeline-left {
+  text-align: right;
+  border-right: 3px solid black;
+}
+
+.timeline-right {
+  text-align: left;
 }
