@@ -22,13 +22,13 @@ a,
 }
 
 .menu a {
-  text-decoration: line-through;
+  text-decoration: none;
   color: black;
   padding: 1vw 12vw;
 }
 
 .menu .selected {
-  text-decoration: none;
+  text-decoration: line-through;
 }
 
 .main {
